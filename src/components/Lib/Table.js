@@ -1,25 +1,19 @@
-import React from 'react';
+import React from 'react'
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux'
 import TableCard from './Card';
+import { Paginator } from './Paginator'
 
-const useStyles = makeStyles((theme) => ({
-  label: {
-    background: '#eee'
-  },
-  media: {
-    height: 200
-  }
-}));
+
 
 const Table = () => {
-  const classes = useStyles();
-  const pokemons = useSelector(state => state)||[]
+  const pokemons = useSelector(state => state.pokemon)||[]
   return (
     <div>
-        <Grid container spacing={3}>
-          {pokemons.map((pokemon) => <TableCard key={Math.random()} data={pokemon} classes={classes}/>)}
+      <Paginator/>
+        <Grid container spacing={8}>
+          {pokemons.map((pokemon) => <TableCard key={Math.random()} data={pokemon}/>)}
         </Grid>
     </div>
   );

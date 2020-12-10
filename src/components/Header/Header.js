@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
     background: '#b71c1c',
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: theme.spacing(5)
   },
   lable: {
     color: '#ffffff'

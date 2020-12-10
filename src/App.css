@@ -1,0 +1,23 @@
+body{
+    background: #2f2f2f;
+}
+.wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front, .back {
+    width: min-content;
+    height: min-content;
+}
+.card{
+    position: relative;
+}
+.back {
+    transform: rotateY(180deg);
+}
+.card:hover .front {
+    transform: rotateY(180deg);}
+.card:hover .back {
+    transform: rotateY(360deg);}

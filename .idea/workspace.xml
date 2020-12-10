@@ -2,36 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b193f80-8026-403a-9c32-0f8eb2c69a8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/controller/admin.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/auth.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/user.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/isAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/isAuth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/user.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/router/admin.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/router/auth.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/router/user.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/getPoke.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Label/Label.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lib/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lib/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lib/Types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/251-2515350_awesome-pokemon-pictures-free-download-pikachu-icon-pikachu-png-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modals/PokemonInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redusers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lib/Ability.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lib/Paginator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lib/types.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redusers/fetchReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redusers/paginatorReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/getPoke.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getPoke.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/251-2515350_awesome-pokemon-pictures-free-download-pikachu-icon-pikachu-png-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/download.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/png-clipart-psyduck-pokemon-go-pokemon-red-and-blue-pikachu-misty-pikachu-food-meme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modals/PokemonInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/PokemonInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -61,6 +52,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.11.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.11.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v14.11.0/bin/node" />
@@ -69,7 +61,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.11.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -96,6 +88,11 @@
       <workItem from="1607068139584" duration="13755000" />
       <workItem from="1607088510269" duration="2298000" />
       <workItem from="1607091151826" duration="3608000" />
+      <workItem from="1607095480106" duration="306000" />
+      <workItem from="1607321500293" duration="23802000" />
+      <workItem from="1607496171704" duration="14983000" />
+      <workItem from="1607514692169" duration="15439000" />
+      <workItem from="1607583980682" duration="16229000" />
     </task>
     <servers />
   </component>

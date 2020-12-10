@@ -1,46 +1,39 @@
-import { useState } from 'react'
+import React from 'react'
+import { Button, Dialog, DialogContent, Grid, Typography,
+} from '@material-ui/core'
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    borderRadius: '1px',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
-
-export default function SimpleModal() {
-  const classes = useStyles();
-  function getModalStyle() {
-    const top = 50 + rand();
-    const left = 50 + rand();
-
-    return {
-      top: `${top}%`,
-      left: `${left}%`,
-      transform: `translate(-${top}%, -${left}%)`,
-    };
-  }
-    const [modalStyle] = useState(getModalStyle);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const body = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">Text in a modal</h2>
-      <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
-      <SimpleModal/>
-    </div>
-  );
+export const PokemonInfo = ({
+  open,
+  close,
+  data,
+  classes
+}) => {
+  console.log('LOOOG', data)
+  return (
+    <Dialog open={open}>
+      <DialogContent dividers className={classes.dialog}>
+        <Grid container spacing={12}>
+          <Grid item spacing={6}>
+            <div className={classes.icon}>
+              <img src={data.sprites.front_default}/>
+            </div>
+            <div className={classes.icon}>
+              <img src={data.sprites.back_default}/>
+            </div>
+          </Grid>
+          <Grid spacing={6}>
+            <div className={classes.infoConteiner}>
+              <Typography variant={'h7'}>№:{data.id}</Typography>
+              <Typography variant={'h5'}>Name: {data.name}</Typography>
+              <Typography>weight: {data.weight} </Typography>
+            </div>
+          </Grid>
+        </Grid>
+        <Button variant="contained" className={classes.button} onClick={close} >
+          Close
+        </Button>
+      </DialogContent>
+    </Dialog>
+  )
 }
+

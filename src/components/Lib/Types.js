@@ -1,8 +1,20 @@
 import React from 'react'
+import './types.css'
+
+import classnames from 'classnames'
+import { Typography } from '@material-ui/core'
 
 export const Types = ({ types }) => {
-  if (types.length > 1) {
-    return <div>{types[0].type.name}/{types[1].type.name}</div>
-  }
-  return <div>{types[0].type.name}</div>
+  const pokeType = types.map(type => {
+    return (
+      <div key={Math.random()}>
+        <Typography className={classnames(type.type.name, 'normal')} component={'div'}>{type.type.name}</Typography>
+      </div>
+    )
+  })
+  return (
+    <div className={'conteiner'}>
+      {pokeType}
+    </div>
+  )
 }
