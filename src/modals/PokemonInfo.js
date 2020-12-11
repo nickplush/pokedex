@@ -8,7 +8,6 @@ export const PokemonInfo = ({
   data,
   classes
 }) => {
-  console.log('LOOOG', data)
   return (
     <Dialog open={open}>
       <DialogContent dividers className={classes.dialog}>
