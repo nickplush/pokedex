@@ -1,32 +1,30 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeCount, changePage, generatePage } from '../../actions/getPoke'
 import { TablePagination } from '@material-ui/core'
 
-
 const useStyles = makeStyles((theme) => ({
   paginator: {
-    color: '#fff',
-  },
-}));
+    color: '#fff'
+  }
+}))
 
 export const Paginator = () => {
   const classes = useStyles()
   const count = useSelector(state => state.paginator.count)
   const page = useSelector(state => state.paginator.page)
   const dispatch = useDispatch()
-  const max =1117
+  const max = 1117
 
   const handleChangeRowsPerPage = (event) => {
-   dispatch(changeCount(parseInt(event.target.value, 10)))
-  };
+    dispatch(changeCount(parseInt(event.target.value, 10)))
+  }
 
   const handleChangePage = async (event, newPage) => {
     await dispatch(changePage(newPage))
-    dispatch(generatePage(newPage,count))
-  };
-
+    dispatch(generatePage(newPage, count))
+  }
 
   return (
     <TablePagination

@@ -1,7 +1,7 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid'
 import { useSelector } from 'react-redux'
-import TableCard from './TableCard';
+import TableCard from './TableCard'
 import { Paginator } from './Paginator'
 
 const Table = () => {
@@ -16,7 +16,7 @@ const Table = () => {
           {pokemons.map((pokemon) => <TableCard key={Math.random()} data={pokemon}/>)}
         </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Table;
+export default Table

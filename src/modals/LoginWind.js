@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
-  Button, CardActions, CardContent, Container, Dialog, FormControl, TextField, Typography,Card
+  Button, CardActions, CardContent, Container, Dialog, FormControl, TextField, Typography, Card
 } from '@material-ui/core'
 import { authentication } from '../actions/authActions'
 import { useDispatch } from 'react-redux'
+import { func, string } from 'prop-types'
 
 export const LoginWind = ({
   type,
   close,
   handleOpenRegistration
 }) => {
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const dispatch = useDispatch()
 
   const handleChaneEmail = (e) => {
@@ -23,10 +24,10 @@ export const LoginWind = ({
   }
 
   const sendData = () => {
-    dispatch (authentication(email,password))
+    dispatch(authentication(email, password))
   }
   return (
-    <Dialog open={type==='login'}>
+    <Dialog open={type === 'login'}>
         <Container maxWidth={'xs'}>
           <Card>
             <CardContent>
@@ -49,4 +50,9 @@ export const LoginWind = ({
         </Container>
     </Dialog>
   )
+}
+LoginWind.propTypes = {
+  type: string,
+  close: func,
+  handleOpenRegistration: func
 }

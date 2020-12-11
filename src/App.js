@@ -11,7 +11,7 @@ const App = () => {
   const dispatch = useDispatch()
   const count = useSelector(state => state.paginator.count)
   const first = useSelector(state => state.paginator.first)
-  useEffect(() => dispatch(fetchPokemon(first,count)))
+  useEffect(() => dispatch(fetchPokemon(first, count)))
   return (
     <BrowserRouter>
       <Header/>

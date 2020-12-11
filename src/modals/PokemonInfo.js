@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Dialog, DialogContent, Grid, Typography,
-} from '@material-ui/core'
+import { Button, Dialog, DialogContent, Grid, Typography } from '@material-ui/core'
+import { bool, func, object } from 'prop-types'
 
 export const PokemonInfo = ({
   open,
@@ -12,7 +12,7 @@ export const PokemonInfo = ({
     <Dialog open={open}>
       <DialogContent dividers className={classes.dialog}>
         <Grid container spacing={12}>
-          <Grid item spacing={6}>
+          <Grid item spacing={4}>
             <div className={classes.icon}>
               <img src={data.sprites.front_default}/>
             </div>
@@ -20,9 +20,9 @@ export const PokemonInfo = ({
               <img src={data.sprites.back_default}/>
             </div>
           </Grid>
-          <Grid spacing={6}>
+          <Grid spacing={4}>
             <div className={classes.infoConteiner}>
-              <Typography variant={'h7'}>№:{data.id}</Typography>
+              <Typography variant={'h6'}>№:{data.id}</Typography>
               <Typography variant={'h5'}>Name: {data.name}</Typography>
               <Typography>weight: {data.weight} </Typography>
             </div>
@@ -35,4 +35,9 @@ export const PokemonInfo = ({
     </Dialog>
   )
 }
-
+PokemonInfo.propTypes = {
+  close: func,
+  open: bool,
+  data: object,
+  classes: object
+}

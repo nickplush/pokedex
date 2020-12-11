@@ -3,6 +3,7 @@ import './types.css'
 
 import classnames from 'classnames'
 import { Typography } from '@material-ui/core'
+import { array } from 'prop-types'
 
 export const Types = ({ types }) => {
   const pokeType = types.map(type => {
@@ -17,4 +18,7 @@ export const Types = ({ types }) => {
       {pokeType}
     </div>
   )
+}
+Types.propTypes = {
+  types: array
 }

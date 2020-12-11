@@ -2,20 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b193f80-8026-403a-9c32-0f8eb2c69a8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/authActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Auth/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Auth/RegistrationWin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modals/LoginWind.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redusers/authReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/user.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/isAuth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/auth.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/router/auth.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/user.router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/authActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/getPoke.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getPoke.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/RegistrationWin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/RegistrationWin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Label/Label.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Label/Label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lib/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/TableCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Ability.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Paginator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lib/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/TableCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/TableCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modals/LoginWind.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/LoginWind.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modals/PokemonInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/PokemonInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/fetchReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/fetchReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redusers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,13 +66,13 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v14.11.0/bin/node" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.11.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -94,7 +110,8 @@
       <workItem from="1607496171704" duration="14983000" />
       <workItem from="1607514692169" duration="15439000" />
       <workItem from="1607583980682" duration="34645000" />
-      <workItem from="1607666876716" duration="2572000" />
+      <workItem from="1607666876716" duration="3687000" />
+      <workItem from="1607672227636" duration="2753000" />
     </task>
     <servers />
   </component>

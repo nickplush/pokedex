@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from '@material-ui/core'
 import { LoginWind } from '../../modals/LoginWind'
-import { RegistrationWind } from './RegistrationWin'
+import { RegistrationWind } from '../../modals/RegistrationWin'
 
 export const Login = () => {
   const [typeModal, setTypeModal] = useState(null)
@@ -15,7 +15,7 @@ export const Login = () => {
   const handleClose = () => {
     setTypeModal(null)
   }
-  return(
+  return (
     <div>
     <Button onClick={handleOpenLogin}>Log in</Button>
     <LoginWind type={typeModal} close={handleClose} handleOpenRegistration={handleOpenRegistration}/>

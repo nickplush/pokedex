@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
-  Button, CardActions, CardContent, Container, Dialog, DialogContent, FormControl, TextField, Typography,Card
+  Button, CardActions, CardContent, Container, Dialog, FormControl, TextField, Typography, Card
 } from '@material-ui/core'
-import { registration } from '../../actions/authActions'
+import { registration } from '../actions/authActions'
+import { func, string } from 'prop-types'
 
-export const RegistrationWind = ({
-  type,
-  close,
-}) => {
-  const [open,setOpen]=useState(false)
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
+export const RegistrationWind = ({ type, close }) => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleChaneEmail = (e) => {
     setEmail(e.target.value)
@@ -21,10 +18,10 @@ export const RegistrationWind = ({
   }
 
   const sendData = () => {
-    registration(email,password)
+    registration(email, password)
   }
   return (
-    <Dialog open={type==='regist'}>
+    <Dialog open={type === 'regist'}>
       <Container maxWidth={'xs'}>
         <Card>
           <CardContent>
@@ -46,4 +43,8 @@ export const RegistrationWind = ({
       </Container>
     </Dialog>
   )
+}
+RegistrationWind.propTypes = {
+  type: string,
+  close: func
 }
