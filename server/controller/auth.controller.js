@@ -1,6 +1,7 @@
 const User = require('../models/user.model')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const passport = require('passport')
 
 const registrationUser = async (req, res) => {
   try {
@@ -35,7 +36,14 @@ const authenticationUser = async (req, res) => {
   }
 }
 
+const googleAuth = () => {
+  passport.authenticate('google', {
+    score: ['profile', 'email']
+  })
+}
+
 module.exports = {
   registrationUser,
-  authenticationUser
+  authenticationUser,
+  googleAuth
 }

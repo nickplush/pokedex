@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b193f80-8026-403a-9c32-0f8eb2c69a8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Lib/Selector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/config/keys.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/auth.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/selectorActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/selectorActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/auth.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/router/auth.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Lib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lib/Selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Selector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lib/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lib/Table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +65,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/config" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -101,7 +107,8 @@
       <workItem from="1608188428368" duration="343000" />
       <workItem from="1608191023750" duration="6577000" />
       <workItem from="1608199457706" duration="7823000" />
-      <workItem from="1608208918870" duration="3793000" />
+      <workItem from="1608208918870" duration="9097000" />
+      <workItem from="1608218350128" duration="1290000" />
     </task>
     <servers />
   </component>
