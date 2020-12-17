@@ -4,6 +4,8 @@ export default function (state = false, action) {
       return action.payload
     case 'LOG_OUT':
       return action.payload
+    case 'IS_AUTH':
+      return action.payload
     default:
       return state
   }

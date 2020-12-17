@@ -7,14 +7,17 @@ import { Types } from './Types'
 import { PokemonInfo } from '../../modals/PokemonInfo'
 import { makeStyles } from '@material-ui/core/styles'
 import { object } from 'prop-types'
+import { useSelector } from 'react-redux'
+import { CardButton } from './CardButton'
 
 const useStyles = makeStyles((theme) => ({
   label: {
     background: '#616161',
-    borderRadius: 10
+    borderRadius: 10,
+    margin: 10
   },
   media: {
-    height: 280
+    height: theme.spacing(40)
   },
   button: {
     marginTop: 10
@@ -49,6 +52,16 @@ const useStyles = makeStyles((theme) => ({
 const TableCard = ({ data }) => {
   const classes = useStyles()
   const [open, setOpen] = useState(false)
+  const isAuth = useSelector(state => state.token)
+  const renderContent = () => {
+    switch (isAuth) {
+      case true:
+        return <CardButton pokeId={data.id}/>
+      default:
+        return null
+    }
+  }
+
   const handleOpen = () => {
     setOpen(true)
   }
@@ -58,7 +71,7 @@ const TableCard = ({ data }) => {
   return (
     <Grid item xs={12} sm={2}>
       <Card className={classes.label}>
-        <CardHeader ></CardHeader>
+        { renderContent() }
           <CardMedia
             className={classes.media}
             image={data.sprites.other['official-artwork'].front_default}

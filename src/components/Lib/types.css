@@ -29,6 +29,7 @@
     margin: 5px;
 }
 .conteiner{
+
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }

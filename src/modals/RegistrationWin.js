@@ -26,7 +26,7 @@ export const RegistrationWind = ({ type, close }) => {
         <Card>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Login
+              Registration
             </Typography>
             <div>
               <FormControl fullWidth>
