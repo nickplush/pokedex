@@ -1,18 +1,23 @@
 import axios from 'axios'
 
-export const fetchPokemon = (first, count) => async (dispatch) => {
-  // const last = first + count
-  // const pokeInfo = []
-  // for (let i = first; i <= last; i++) {
-  //   pokeInfo.push((await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`)).data)
-  // }
-  const pokemons = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${first}&limit=${count}`)
-  const pokeBase = pokemons.data.results.map((pokemon) => axios(pokemon.url))
-  const pokeInfo = await (await Promise.all(pokeBase)).map(element => element.data)
-  dispatch({
-    type: 'FETCH_POKEMON',
-    payload: pokeInfo
-  })
+export const fetchPokemon = (first, count, filter) => async (dispatch) => {
+  if (filter === 'all') {
+    const pokemons = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${first}&limit=${count}`)
+    const pokeBase = pokemons.data.results.map((pokemon) => axios(pokemon.url))
+    const pokeInfo = await (await Promise.all(pokeBase)).map(element => element.data)
+    dispatch({
+      type: 'FETCH_POKEMON',
+      payload: pokeInfo
+    })
+  } else {
+    const pokemons = (await axios.get(`https://pokeapi.co/api/v2/type/${filter}`)).data
+    const pokeBase = pokemons.pokemon.map((item) => axios(item.pokemon.url))
+    const pokeInfo = await (await Promise.all(pokeBase)).map(element => element.data)
+    dispatch({
+      type: 'FETCH_POKEMON',
+      payload: pokeInfo
+    })
+  }
 }
 export const changeCount = (count) => (dispatch) => {
   dispatch({
@@ -34,6 +39,6 @@ export const generatePage = (page, count) => (dispatch) => {
     payload: newPage
   })
 }
-export const getFav = (poke) => new Promise(resolve => {
+export const getPokemon = (poke) => new Promise(resolve => {
   axios.get(`https://pokeapi.co/api/v2/pokemon/${poke}`).then(res => resolve(res.data))
 })

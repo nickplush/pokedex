@@ -12,9 +12,10 @@ import { checkAuth } from './actions/authActions'
 const App = () => {
   const dispatch = useDispatch()
   const isAuth = useSelector(state => state.token)
+  const filter = useSelector(state => state.selector)
   console.log('LOOOG', 'a')
   const start = () => {
-    dispatch(fetchPokemon(first, count))
+    dispatch(fetchPokemon(first, count, filter))
     dispatch(checkAuth(isAuth))
   }
   const count = useSelector(state => state.paginator.count)
