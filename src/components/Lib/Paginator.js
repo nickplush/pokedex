@@ -15,7 +15,7 @@ export const Paginator = () => {
   const count = useSelector(state => state.paginator.count)
   const page = useSelector(state => state.paginator.page)
   const dispatch = useDispatch()
-  const max = 1117
+  const max = useSelector(state => state.pokemon.count)
 
   const handleChangeRowsPerPage = (event) => {
     dispatch(changeCount(parseInt(event.target.value, 10)))

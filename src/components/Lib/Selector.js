@@ -33,7 +33,6 @@ const Selector = () => {
         id="demo-simple-select-outlined"
         value={selector}
         onChange={handleChange}
-        color={'palette.secondary.main'}
       >
         <MenuItem key={Math.random()} value={'all'}>ALL</MenuItem>
         {renderTypes()}

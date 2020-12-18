@@ -5,17 +5,26 @@ export const fetchPokemon = (first, count, filter) => async (dispatch) => {
     const pokemons = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${first}&limit=${count}`)
     const pokeBase = pokemons.data.results.map((pokemon) => axios(pokemon.url))
     const pokeInfo = await (await Promise.all(pokeBase)).map(element => element.data)
+    const pokeObj = {
+      pokeBase: pokeInfo,
+      count: pokemons.data.count
+    }
     dispatch({
       type: 'FETCH_POKEMON',
-      payload: pokeInfo
+      payload: pokeObj
     })
   } else {
     const pokemons = (await axios.get(`https://pokeapi.co/api/v2/type/${filter}`)).data
-    const pokeBase = pokemons.pokemon.map((item) => axios(item.pokemon.url))
+    const pokeBase = pokemons.pokemon.slice(first, first + count).map((item) => axios(item.pokemon.url))
+    console.log(first, count)
     const pokeInfo = await (await Promise.all(pokeBase)).map(element => element.data)
+    const pokeObj = {
+      pokeBase: pokeInfo,
+      count: pokemons.pokemon.length
+    }
     dispatch({
       type: 'FETCH_POKEMON',
-      payload: pokeInfo
+      payload: pokeObj
     })
   }
 }
