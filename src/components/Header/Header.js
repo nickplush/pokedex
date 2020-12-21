@@ -1,9 +1,7 @@
 import React from 'react'
 import { Button, Toolbar, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { useDispatch, useSelector } from 'react-redux'
-import { logOut } from '../../actions/authActions'
-import { Login } from '../Auth/Login'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
@@ -20,23 +18,20 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Header = () => {
-  const dispatch = useDispatch()
   const classes = useStyles()
   const isAuth = useSelector(state => state.token)
-  const handleClickLogout = () => {
-    dispatch(logOut())
-  }
+  console.log(isAuth)
   const renderContent = () => {
     switch (isAuth) {
-      case true:
+      case false:
+        return <Button href={'http://localhost:5000/auth/google'}>Login</Button>
+      default:
         return (
           <div className={classes.root}>
-            <Button href='/api/favorite'>favorite</Button>
-            <Button onClick={handleClickLogout}>Log out</Button>
+            <Button href='/favorite'>favorite</Button>
+            <Button href={'http://localhost:5000/api/logout'}>Log out</Button>
           </div>
         )
-      case false:
-        return <Login/>
     }
   }
   return (

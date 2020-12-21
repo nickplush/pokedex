@@ -1,21 +1,19 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { addFavorite, removeFavorite } from '../../actions/userActions'
 import { StarBorder, Star } from '@material-ui/icons'
 
 export const CardButton = ({ pokeId }) => {
-  const pokemon = useSelector(state => state.userPokemon)
-  const dispatch = useDispatch()
-
+  const user = useSelector(state => state.token)
   const addFav = () => {
-    dispatch(addFavorite(pokeId))
+    addFavorite(pokeId,user._id)
   }
 
   const removeFav = () => {
-    dispatch(removeFavorite(pokemon, pokeId))
+    removeFavorite(pokeId,user._id)
   }
   const renderContent = () => {
-    switch (pokemon.indexOf(pokeId)) {
+    switch (user.favorites.indexOf(pokeId)) {
       case -1:
         return <StarBorder onClick={addFav}>Add Favorite</StarBorder>
       default:

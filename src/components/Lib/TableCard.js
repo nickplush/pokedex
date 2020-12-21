@@ -54,7 +54,7 @@ const TableCard = ({ data }) => {
   const [open, setOpen] = useState(false)
   const isAuth = useSelector(state => state.token)
   const renderContent = () => {
-    switch (isAuth) {
+    switch (Boolean(isAuth)) {
       case true:
         return <CardButton pokeId={data.id}/>
       default:

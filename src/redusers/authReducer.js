@@ -1,11 +1,7 @@
-export default function (state = false, action) {
+export default function (state = null, action) {
   switch (action.type) {
-    case 'CHECK_AUTH':
-      return action.payload
-    case 'LOG_OUT':
-      return action.payload
-    case 'IS_AUTH':
-      return action.payload
+    case 'FETCH_USER':
+      return action.payload || false
     default:
       return state
   }

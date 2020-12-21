@@ -1,28 +1,33 @@
 const mongoose = require('mongoose')
 const express = require('express')
+const keys = require('./config/keys')
+const bodyParser = require('body-parser')
+const cookieSession = require('cookie-session')
+const passport = require('passport')
+require('./passport/passport')
+
+mongoose.Promise = global.Promise;
 const app = express()
-const port = process.env.PORT || 4000
-const authRouter = require('./router/auth.router')
-const userRouter = require('./router/user.router')
-const isAuth = require('./middleware/isAuth')
-const cors = require('cors')
 
-app.use(cors())
+mongoose.connect(keys.dbUrl, keys.dbOptions)
 
-let db_url = 'mongodb://localhost:27017/users'
-if (process.env && process.env.APP_CONFIG) {
-  db_url = 'mongodb://550f685ba2708717b1611319d42cda99:poke2020@11a.mongo.evennode.com:27018,11b.mongo.evennode.com:27018/550f685ba2708717b1611319d42cda99?replicaSet=eu-11'
-}
+app.use(bodyParser.json())
+app.use(
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [keys.cookieKey]
+  })
+)
+app.use(passport.initialize())
+app.use(passport.session())
 
-mongoose.connect(db_url, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true
-})
-app.use(express.json())
+require('./controller/auth.controller')(app)
+require('./controller/user.controller')(app)
 
-app.use('/auth', authRouter)
-app.use('/user', isAuth, userRouter)
 
-app.listen(port, () => console.log('server is running'))
+
+const PORT = process.env.PORT || 5000
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.listen(PORT);

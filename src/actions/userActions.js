@@ -1,31 +1,8 @@
 import axios from 'axios'
-const proxy = 'http://localhost:4000/'
 
-const token = localStorage.getItem('token')
-
-export const addFavorite = (pokeId) => async (dispatch) => {
-  await axios.post(proxy + 'user/favorite', { pokeId }, {
-    headers: {
-      token: token
-    }
-  })
-  dispatch({ type: 'ADD_FAVORITE', payload: pokeId })
+export const addFavorite = async (pokeId, userId) => {
+  await axios.post('http://localhost:5000/api/favorite/', { pokeId, userId })
 }
-export const removeFavorite = (pokemons, pokeId) => async (dispatch) => {
-  await axios.patch(proxy + 'user/favorite', { pokeId }, {
-    headers: {
-      token: token
-    }
-  })
-  const newPoke = pokemons.filter(pokemon => pokemon !== pokeId)
-  dispatch({ type: 'REMOVE_FAVORITE', payload: newPoke })
+export const removeFavorite = async (pokeId, userId) => {
+  await axios.patch('http://localhost:5000/api/favorite/', { pokeId, userId })
 }
-
-// export const getFavorites = (token) => async (dispatch) => {
-//   const favorites = await axios.get(proxy + 'user/favorite', {
-//     headers: {
-//       token: token
-//     }
-//   })
-//   dispatch({ type: 'FETCH_FAVORITE', payload: favorites.data })
-// }
